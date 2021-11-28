@@ -5,7 +5,7 @@ const Spinner = ({ visible }) => {
   return (
     <div className="spinner">
       <Loader
-        type="ThreeDots"
+        type="TailSpin"
         color="#3a4a4f"
         height={100}
         width={100}

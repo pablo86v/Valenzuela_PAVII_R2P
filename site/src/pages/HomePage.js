@@ -19,18 +19,11 @@ const HomePage = () => {
         })
     }
 
-    const getTiposMascota = () => {
-        httpGet(API_SECTION.TIPOS).then(data => {
-            setTiposMascota(data);
-        })
-    }
-
     useEffect(() => {
         if(!localStorage.getItem("token")){
             navigate("/login");
         }
         getMascotas();
-        getTiposMascota();
     }, []);
 
     return (
