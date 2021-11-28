@@ -21,7 +21,6 @@ const verifyToken = async (req, res, next) => {
     const bearerToken = req.headers["authorization"];  
     if (bearerToken) { 
         req.token = bearerToken.split(' ')[1];
-		console.log(req.headers);
         try {
             const data = await jwt.verify(req.token, SECRET);
             next();  
