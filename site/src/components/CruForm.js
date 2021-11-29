@@ -43,7 +43,6 @@ const CruForm = ({ typeData, data }) => {
     const addItem = async (mascota) => {
         if(!mascota.vacunado) mascota.vacunado = false;
         httpPost(API_SECTION.MASCOTAS, mascota).then(data => {
-            localStorage.setItem('token', data);
             setTimeout(() => { navigate("/") }, 1000);
         }).catch(err => {
             alert("No se pudo guardar la información");
