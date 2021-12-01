@@ -17,9 +17,10 @@ const LoginPage = () => {
             setTimeout(() => { 
                 setShowSpinner(false);
                 navigate("/");
-            }, 3000);
+            }, 2000);
         }).catch(err => {
             alert("Usuario y/o contraseña inválidos");
+            setShowSpinner(false);
             console.error(err);
         });
     }
